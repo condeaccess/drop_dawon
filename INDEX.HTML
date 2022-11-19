@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: arial, helvetica, sans-serif;
+    font-size: 100%
+}
+
+nav {
+    position: relative;
+    font-family: sonospace;
+    float: left;
+    width: 100%
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    background-color: rgb(255, 0, 136);
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+li a{
+    color: rgb(255, 68, 174);
+    text-decoration: none;
+}
+
+li ul {
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+    box-shadow: 0px 8px 16px 0px rgba(255, 0, 183, 0.2);
+}
+
+li ul li {
+    clear: both;
+    width: 100%;
+}
+
+ul li:hover,
+ul li:focus-within {
+    background-color: #7a0093;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: rgb(255, 0, 187);
+}
+
+/*Controla a exibição do dropdown*/
+ul li:hover>ul,
+ul li:focus-within>ul,
+ul li ul:hover,
+ul li ul:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+    </style>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Menu DropDown</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body class = "body">
+    <nav class = "nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre Mim</a>
+                <ul>
+                <li><a href ="#">Meus Projetos</a></li>
+                <li><a href ="#">Meu Currículo</a></li>
+                <li><a href ="#">Meus Hobbies</a></li>
+            </ul></li>
+        <li><a href="#">Entre em contato</a></li>
+        <li><a href="#">Redes Sociais</a></li>
+        </ul>
+    </nav>
+    <h1>Muitas coisas começam a partir de outras</h1>
+    <p>Nada do que foi será do mesmo jeio que foi</p>
+</body>
+</html>
